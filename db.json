@@ -1,0 +1,36 @@
+{
+  "topics": [
+    {
+      "id": "ab6f",
+      "title": "html",
+      "body": "html is..."
+    },
+    {
+      "id": "a9ac",
+      "title": "css",
+      "body": "css is..."
+    },
+    {
+      "id": "37b5",
+      "title": "js",
+      "body": "js is ..."
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
