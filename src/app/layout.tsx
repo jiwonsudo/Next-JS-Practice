@@ -14,10 +14,10 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   return (
     <html>
       <body>
-        <h1><Link href="/">WEB</Link></h1>
+        <h1><Link href="/" className='font-bold text-5xl text-slate-500'>WEB</Link></h1>
         <ol>
           {topics.map((topic: any) => {
-            return <li key={topic.id}><Link href={`/read/${topic.id}`}>{topic.title}</Link></li>
+            return <li key={topic.id} className='font-normal text-indigo-700 text-blue underline'><Link href={`/read/${topic.id}`}>{topic.title}</Link></li>
           })
           }
         </ol>
