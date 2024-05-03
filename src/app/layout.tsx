@@ -13,16 +13,20 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   const topics = await resp.json();
   return (
     <html>
-      <body>
-        <h1><Link href="/" className='font-bold text-5xl text-slate-500'>WEB</Link></h1>
-        <ol>
-          {topics.map((topic: any) => {
-            return <li key={topic.id} className='font-normal text-indigo-700 text-blue underline'><Link href={`/read/${topic.id}`}>{topic.title}</Link></li>
-          })
-          }
-        </ol>
-        {children}
-        <Control/>
+      <body className="flex items-center justify-center bg-slate-700">
+        <div className="w-3/4 text-center">
+          <h1 className="mt-5 py-4 border-2 border-slate-300 rounded-lg font-normal text-5xl text-slate-300"><Link href="/">Practice web</Link></h1>
+          <div className='flex justify-center'>
+            <ol className='w-1/2 my-4 py-4 border-2 border-slate-300 rounded-lg'>
+              {topics.map((topic: any) => {
+                return <li key={topic.id} className='font-normal text-indigo-700 text-slate-300 underline'><Link href={`/read/${topic.id}`}>{topic.title}</Link></li>
+              })
+              }
+            </ol>
+          </div>
+          {children}
+          <Control/>
+        </div>
       </body>
     </html>
   );
